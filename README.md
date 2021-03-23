@@ -1,2 +1,0 @@
-# corluzirveasansor.com
- 
