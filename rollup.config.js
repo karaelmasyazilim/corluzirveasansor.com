@@ -28,15 +28,13 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				svelte({
-					// svelte-windicss-preprocess
-					preprocess: require('svelte-windicss-preprocess').preprocess({
-					  config: 'tailwind.config.js',     // tailwind config file path
-					  compile: true,                    // false: interpretation mode; true: compilation mode
-					  prefix: 'windi-',                 // set compilation mode style prefix
-					  globalPreflight: true,            // set preflight style is global or scoped
-					  globalUtility: true,              // set utility style is global or scoped
-					}),
+				preprocess: require('svelte-windicss-preprocess').preprocess({
+					config: 'tailwind.config.js',     // tailwind config file path
+					compile: true,                    // false: interpretation mode; true: compilation mode
+					prefix: 'windi-',                 // set compilation mode style prefix
+					globalPreflight: true,            // set preflight style is global or scoped
+					globalUtility: true,              // set utility style is global or scoped
+				}),
 				compilerOptions: {
 					dev,
 					hydratable: true
@@ -87,9 +85,7 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				svelte({
-					// svelte-windicss-preprocess
-					preprocess: require('svelte-windicss-preprocess').preprocess({
+				preprocess: require('svelte-windicss-preprocess').preprocess({
 					  config: 'tailwind.config.js',     // tailwind config file path
 					  compile: true,                    // false: interpretation mode; true: compilation mode
 					  prefix: 'windi-',                 // set compilation mode style prefix
@@ -126,7 +122,8 @@ export default {
 			resolve(),
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: false
 			}),
 			commonjs(),
 			!dev && terser()

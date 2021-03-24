@@ -4,14 +4,16 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		
 		font-weight: 300;
 		padding: 0 1em;
+		@apply z-10;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
+		@apply z-10;
 	}
 
 	/* clearfix */
@@ -46,11 +48,18 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+	
+	#logo > a , #logo > a > img {
+		@apply z-10;
+	}
 </style>
 
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
+<nav class="flex flex-col sm:flex-row py-6 z-10">
+	<div id="logo" class="w-3/4 sm:w-48 place-self-center sm:place-self-center  z-0">
+		<a href="/"> <img src="/logo.png" class="z-10" alt=""></a>
+	</div>
+	<ul class="text-gray-50 flex flex-1 align-middle justify-center">
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="."> <i class="fa fa-home"></i></a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
