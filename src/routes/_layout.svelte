@@ -26,8 +26,8 @@
 
 		<div class="flex flex-col flex-1 justify-center mb-40 items-center z-10">
 			
-			<a href="/" class="z-10 w-66">
-				<img src="/logo.png" class="w-66" alt="">
+			<a href="/" class="z-10 w-66 hidden sm:block">
+				<img src="/logo.png" class="w-66 " alt="">
 			</a>
 			<h1 class="text-white text-7xl font-extrabold p-4 uppercase text-center">zirve asansör </h1>
 			<div class="z-10 w-5/10 sm:w-2/10 md:-3/10 mb-6">
