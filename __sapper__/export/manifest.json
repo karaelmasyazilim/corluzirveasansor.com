@@ -1,0 +1,14 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"name": "corluzirveasansor.com",
+	"short_name": "zirveasansor",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "logo.jpg",
+			"type": "image/png"
+		}
+	]
+}

@@ -56,7 +56,9 @@
 
 <nav class="flex flex-col sm:flex-row py-6 z-10">
 	<div id="logo" class="w-3/4 sm:w-48 place-self-center sm:place-self-center  z-0">
-		<a href="/"> <img src="/logo.png"  class="z-10 w-full" alt=""></a>
+		<a href="/"> 
+			<img src="/logo.png"  class="z-10 w-full" alt="">
+		</a>
 	</div>
 	<ul class="text-gray-50 flex flex-1 align-middle justify-center">
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="."> <i class="fa fa-home"></i></a></li>
