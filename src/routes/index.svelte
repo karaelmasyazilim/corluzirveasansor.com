@@ -41,7 +41,7 @@
 		</div>
 
 
-		<div class="py-42">
+		<div class="mt-42">
 			<h2 class="text-5xl font-extrabold text-center mb-6">Kadromuz</h2>
 			<h3 class="text-3xl font-semibold text-center">İşini aşkla yapan ekibimiz</h3>
 			<hr class="border-0 border-b-1 p-3 border-red-500">
@@ -179,12 +179,12 @@
 	</div>
 </div>
 
-<div class="flex w-full min-h-screen bg-white">
+<div class="flex w-full h-screen bg-white">
    <div class="container container-md mx-auto">
 	    <div class="w-full h-full flex flex-col items-center  justify-center ">
 			<h2 class="text-5xl font-extrabold text-center">PORTFÖY</h2>
 			<h3 class="text-3xl font-semibold text-center my-6">Yapmış oldugumuz bazı çalışmalara göz atabilirsiniz</h3>
-			<hr class="border-t-2 mt-3 pb-12 border-red-500 w-full">
+			<hr class="border-t-2 mt-3 mb-12 border-red-500 w-full">
 			<div class="w-full  grid grid-cols-1 sm:grid-cols-3">
 				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
 					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
@@ -226,7 +226,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
+					<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
 					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
 						<div  class="portfoy-cover">
 							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
