@@ -19,12 +19,13 @@
 <div  class="w-full h-screen relative">
 	
 	<header class="w-full h-screen flex flex-col bg-cover bg-fixed"  style="background-image: url('/stock_images/asansor.jpg');">
-		<div class="top-0 left-0 w-full h-screen  absolute bg-gray-800 bg-opacity-40 z-0"></div>
+		<div class="top-0 left-0 w-full h-screen  absolute bg-gray-900 bg-opacity-70 z-0"></div>
 		<div class="container container-sm mx-auto z-10">
 			<Nav {segment} />
 		</div>
 
 		<div class="flex flex-col flex-1 justify-center mb-40 items-center z-10">
+			<span class="font-bold text-white font-semibold text-xl p-6"> <i class="fa fa-mobile-alt p-3 "></i> <a href="tel:05353632881" class="text-lg P-3 text-gray-300"> +90 ( 0535 ) 363 28 81 </a> </span>
 			
 			<a href="/" class="z-10 w-66 hidden sm:block">
 				<img src="/logo.png" class="w-66 " alt="">
