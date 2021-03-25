@@ -41,7 +41,7 @@
 		</div>
 
 
-		<div class="mt-42">
+		<div class="pt-42">
 			<h2 class="text-5xl font-extrabold text-center mb-6">Kadromuz</h2>
 			<h3 class="text-3xl font-semibold text-center">İşini aşkla yapan ekibimiz</h3>
 			<hr class="border-0 border-b-1 p-3 border-red-500">
@@ -93,7 +93,7 @@
 
 
 
-<div class="w-full h-screen bg-fixed bg-cover relative flex flex-col items-center justify-center align-middle" style="background-image: url('/stock_images/bg-2.jpg')">
+<div class="w-full min-h-screen bg-fixed bg-cover relative flex flex-col items-center justify-center align-middle" style="background-image: url('/stock_images/bg-2.jpg')">
 <div class="w-full h-full absolute top-0 left-0 opacity-30 bg-gray-600 z-0"></div>
 <div class="z-10">
  <div class="container container-sm mx-auto text-white text-center flex flex-col align-middle items-center">
@@ -149,7 +149,7 @@
 </div>
 
 
-<div id="carousel" class="w-full h-screen flex items-center relative z-0" style="background-image: url('/stock_images/asansor3.png');">
+<div id="carousel" class="w-full min-h-screen flex items-center relative z-0" style="background-image: url('/stock_images/asansor3.png');">
 	<div id="carousel-cover" class="w-full h-full absolute duration-1000 top-0 left-0 z-0 "></div>
 	<div class="flex relative z-10 w-full h-full items-center text-center">
 		<div class=" w-16 h-16 flex align-middle items-center bg-gray-700 cursor-pointer hover:bg-gray-900 duration-500">
@@ -179,10 +179,10 @@
 	</div>
 </div>
 
-<div class="flex w-full h-screen bg-white">
+<div class="flex w-full min-h-screen bg-white">
    <div class="container container-md mx-auto">
 	    <div class="w-full h-full flex flex-col items-center  justify-center ">
-			<h2 class="text-5xl font-extrabold text-center">PORTFÖY</h2>
+			<h2 class="text-5xl font-extrabold text-center mt-12 sm:mt-0">PORTFÖY</h2>
 			<h3 class="text-3xl font-semibold text-center my-6">Yapmış oldugumuz bazı çalışmalara göz atabilirsiniz</h3>
 			<hr class="border-t-2 mt-3 mb-12 border-red-500 w-full">
 			<div class="w-full  grid grid-cols-1 sm:grid-cols-3">
