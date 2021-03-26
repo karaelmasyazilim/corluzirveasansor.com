@@ -9,16 +9,16 @@
 </div>
 
 
-<div class="container container-md mx-auto py-12">
+<div class="container container-md mx-auto">
 
-	<div class="flex">
-		<ul class="text-gray-700 font-semibold flex flex-col justify-center">
+	<div class="flex sm:flex-row flex-col">
+		<ul class="text-gray-700 font-semibold flex flex-col justify-center p-6">
 			<li><a href="tel:05353632881" ><i class="fa fa-mobile-alt p-3"></i> +90 ( 0535 ) 363 28 81 </a></li>
 			<li><a href="mailto:corluzirve@gmail.com"><i class="fa fa-envelope p-3 "></i> corluzirve@gmail.com </a></li>
 			<li><address><i class="fas fa-map-marker-alt p-3"></i> Şeyhsinan mahallesi eski sanayi çarşısı 1.sokak no:9/1 çorlu/tekirdağ</address></li>
 		</ul>
 		<div class="flex w-full items-center justify-center content-center">
-			<img  class="w-82 " src="/qr.png" alt="">
+			<a href=""><img  class="w-82 p-6" src="/qr.png" alt="adress qr"></a>
 		</div>
 	</div>
 </div>
