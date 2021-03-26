@@ -62,10 +62,10 @@
 	</div>
 	<ul class="text-gray-50 flex flex-1 align-middle justify-center">
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="."> <i class="fa fa-home"></i></a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+		<li><a aria-current="{segment === 'about'? 'page' : undefined}" href="about">Hakkımızda</a></li>
+		<li><a aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">İletişim</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
 	</ul>
 </nav>

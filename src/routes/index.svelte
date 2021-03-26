@@ -1,6 +1,160 @@
 
 
 
+<script>
+
+	import { fade } from 'svelte/transition';
+	import  { quintInOut } from 'svelte/easing'
+	import { goto } from '@sapper/app'
+	import { tweened } from 'svelte/motion';
+	import {onMount} from 'svelte'
+
+
+	export let screenHeight;
+	function handleScroll() {
+		//$scrollTo = screenHeight
+		if(window) {
+
+			window.scrollTo(0,screenHeight)
+		}
+	}
+
+    let portfoy = [
+		{
+			img: '/stock_images/elevator3.jpg',
+			workName: 'Çalışma adı 1',
+			workText: 'Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler'
+		},
+		{
+			img: '/stock_images/elevator3.jpg',
+			workName: 'Çalışma adı 2',
+			workText: 'Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler'
+		},
+		{
+			img: '/stock_images/elevator3.jpg',
+			workName: 'Çalışma adı 3',
+			workText: 'Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler'
+		},
+		{
+			img: '/stock_images/elevator3.jpg',
+			workName: 'Çalışma adı',
+			workText: 'Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler'
+		},
+		{
+			img: '/stock_images/elevator3.jpg',
+			workName: 'Çalışma adı',
+			workText: 'Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler'
+		},
+		{
+			img: '/stock_images/elevator3.jpg',
+			workName: 'Çalışma adı',
+			workText: 'Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler'
+		},
+		
+	]
+
+
+	let slider = [
+		{
+			img: '/stock_images/asansor.jpg',
+			header : 'Ürün adı1',
+			text : `Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
+			ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
+			btnText : 'daha fazla bilgi',
+			btnLink : '#link'
+		},
+		{
+			img: '/stock_images/asansor2.jpg',
+			header : 'Ürün adı2',
+			text : `Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
+			ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
+			btnText : 'daha fazla bilgi',
+			btnLink : '#link'
+		},
+		{
+			img: '/stock_images/asansor3.png',
+			header : 'Ürün adı3',
+			text : `Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
+			ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
+			btnText : 'daha fazla bilgi',
+			btnLink : '#link'
+		},
+	]
+
+	let sliderMax = slider.length - 1
+	let currentSlide = 0
+	let sliderInterval
+	function sliderIntervalFunc() {
+		handleSliderMoveRight()
+	}
+
+	function pauseSlider() {
+		clearInterval(sliderInterval)
+	}
+
+	function resumeSlider() {
+		sliderInterval = setInterval(sliderIntervalFunc, 5000)
+	}
+    onMount(async () => {
+		(function() {
+			sliderInterval = setInterval(sliderIntervalFunc, 5000)
+		})()
+	})
+
+	function handleSlideBtnClick(link) {
+		goto('#slide')
+	}	
+
+	function handleSliderMoveLeft() {
+		if(currentSlide <= 0) {
+			currentSlide = sliderMax 
+		} else currentSlide--
+		 
+	}
+
+	function handleSliderMoveRight() {
+		if(currentSlide == sliderMax) currentSlide = 0
+		else currentSlide++
+	}
+
+	let portfoyOnView
+
+	function handlePortfoy(work, id) {
+		portfoyOnView = {work, id}
+		portfoy.splice(id, 1, {})
+		portfoy = portfoy
+	}
+
+	function handlePortfoyClose() {
+		portfoy.splice( portfoyOnView.id, 1,portfoyOnView.work );
+		portfoy = portfoy
+		portfoyOnView = undefined
+	}
+</script>
+
+<svelte:window bind:outerHeight={screenHeight} />
+
+<div  class="w-full h-screen flex flex-col bg-cover bg-fixed z-0 relative"  style="background-image: url('/stock_images/asansor.jpg');">
+	
+	<div class="top-0 left-0 w-full h-screen  absolute bg-gray-900 bg-opacity-70 z-0"></div>
+	<div class="flex flex-col flex-1 justify-center mb-40 items-center z-10">
+		<span class="font-bold text-white font-semibold text-xl p-6"> <i class="fa fa-mobile-alt p-3 "></i> <a href="tel:05353632881" class="text-lg P-3 text-gray-300"> +90 ( 0535 ) 363 28 81 </a> </span>
+		
+		<a href="/" class="z-10 w-66 hidden sm:block">
+			<img src="/logo.png" class="w-66 " alt="">
+		</a>
+		<h1 class="text-white text-7xl font-extrabold p-4 uppercase text-center">zirve asansör </h1>
+		<div class="z-10 w-5/10 sm:w-2/10 md:-3/10 mb-6">
+			<hr class="border-t-3 mb-1 border-red-500" />
+			<hr class="border-t-3 border-red-500" />
+			
+		</div>
+		<button class="flex w-12 h-12 border-4 rounded-full border-white outline-none items-center justify-center" on:click={handleScroll}>
+			<i class="fa fa-chevron-down fa-2x text-white"></i>
+		</button>
+	</div>
+</div>
+
 <div class="container container-sm mx-auto bg-white">
 	<div class="flex flex-col py-42">
 		<h2 class="text-5xl font-extrabold text-center">Müşteri Memnuniyeti</h2>
@@ -149,29 +303,37 @@
 </div>
 
 
-<div id="carousel" class="w-full min-h-screen flex items-center relative z-0" style="background-image: url('/stock_images/asansor3.png');">
+<div id="carousel" class="w-full min-h-screen flex items-center relative z-0" style="background-image: url('{slider[currentSlide] && slider[currentSlide].img || ''}');"
+transition:fade
+on:mouseenter={pauseSlider}
+on:mouseleave={resumeSlider}
+>
 	<div id="carousel-cover" class="w-full h-full absolute duration-1000 top-0 left-0 z-0 "></div>
 	<div class="flex relative z-10 w-full h-full items-center text-center">
-		<div class=" w-16 h-16 flex align-middle items-center bg-gray-700 cursor-pointer hover:bg-gray-900 duration-500">
 		
+		<!--Slider btn left-->
+		<div class=" w-16 h-16 flex align-middle items-center bg-gray-700 cursor-pointer hover:bg-gray-900 duration-500"
+			on:click={handleSliderMoveLeft}
+		>
 				<span class="w-full text-gray-300 hover:text-gray-400"><i class="fa fa-chevron-left fa-2x"></i></span>
-		
 		</div>
+
 		<div class="flex-1">
 			<div class="container container-md mx-auto text-white">
 				
-			<h2 class="text-5xl font-extrabold text-center mb-6 mt-12 text-white">Ürün adı</h2>
-			<p class=" font-semibold text-lg">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. 
-				Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri 
-				standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.
-				 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü 
-				 yayıncılık yazılımları ile popüler olmuştur.</p>
-				 <button class="border-4 px-8 py-4 m-3 font-bold border-white rounded outline-none rounded">Daha fazla bilgi</button>
+			<h2  transition:fade class="text-5xl font-extrabold text-center mb-6 mt-12 text-white">{slider[currentSlide] && slider[currentSlide].header || ''}</h2>
+			<p 	 transition:fade class=" font-semibold text-lg">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. 
+				 {slider[currentSlide] && slider[currentSlide].text}</p>
+				 <button class="border-4 px-8 py-4 m-3 font-bold border-white rounded outline-none rounded" 
+				 transition:fade
+				 on:click={()=>handleSlideBtnClick(slider[currentSlide] && slider[currentSlide].btnLink || '' )}>{slider[currentSlide] && slider[currentSlide].btnText || ''}</button>
 			</div>
 		</div>
 
 
-		<div class=" w-16 h-16 flex align-middle items-center bg-gray-700 cursor-pointer hover:bg-gray-900 duration-500">
+		<div class=" w-16 h-16 flex align-middle items-center bg-gray-700 cursor-pointer hover:bg-gray-900 duration-500"
+		on:click={handleSliderMoveRight}
+		>
 		
 			<span class="w-full text-gray-300 hover:text-gray-400"><i class="fa fa-chevron-right fa-2x"></i></span>
 	
@@ -179,66 +341,53 @@
 	</div>
 </div>
 
-<div class="flex w-full min-h-screen bg-white">
+<div class="flex w-full min-h-screen bg-white z-10 relative">
    <div class="container container-md mx-auto">
 	    <div class="w-full h-full flex flex-col items-center  justify-center ">
 			<h2 class="text-5xl font-extrabold text-center mt-12 sm:mt-0">PORTFÖY</h2>
 			<h3 class="text-3xl font-semibold text-center my-6">Yapmış oldugumuz bazı çalışmalara göz atabilirsiniz</h3>
 			<hr class="border-t-2 mt-3 mb-12 border-red-500 w-full">
 			<div class="w-full  grid grid-cols-1 sm:grid-cols-3">
-				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
-					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
+
+				{#each portfoy as work, id}
+					
+			
+				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000 relative z-0" on:click={()=>handlePortfoy(work, id)}>
+					<div class="inner-portfoy w-full h-full bg-cover relative" style=" { work.img  ? 'background-image: url(' + work.img +');' : ''}">
 						<div  class="portfoy-cover">
-							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
-							<p class="w-full px-18 text-white">Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler</p>
+							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">{work.workName || ''}</h3>
+							<p class="w-full px-18 text-white">{work.workText || ''}</p>
 						</div>
 					</div>
 				</div>
-				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
-					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
-						<div  class="portfoy-cover">
-							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
-							<p class="w-full px-18 text-white">Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler</p>
-						</div>
+				{/each} 
+				{#if portfoyOnView && portfoyOnView.work}
+
+						<div transition:fade={{ duration:400 ,easing:quintInOut}} class="flex w-full  h-screen fixed top-0 left-0 items-center justify-center cursor-pointer"  on:click={handlePortfoyClose}>
+							<div class="bg-gray-800 opacity-90 w-full h-full absolute"></div>
+							<div class="flex h-full w-full m-0 sm:h-2/3 sm:w-2/3  bg-contain bg-no-repeat bg-center z-10" 
+							style="background-image: url('{portfoyOnView && portfoyOnView.work &&  portfoyOnView.work.img || ''}')">
+								
+							</div>
+						
 					</div>
-				</div>
-				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
-					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
-						<div  class="portfoy-cover">
-							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
-							<p class="w-full px-18 text-white">Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler</p>
-						</div>
-					</div>
-				</div>
-				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
-					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
-						<div  class="portfoy-cover">
-							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
-							<p class="w-full px-18 text-white">Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler</p>
-						</div>
-					</div>
-				</div>
-				<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
-					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
-						<div  class="portfoy-cover">
-							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
-							<p class="w-full px-18 text-white">Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler</p>
-						</div>
-					</div>
-				</div>
-					<div class="w-full h-72  p-6 hover:p-0 hover:cursor-pointer duration-1000">
-					<div class="inner-portfoy w-full h-full bg-cover relative" style="background-image: url('/stock_images/elevator3.jpg');">
-						<div  class="portfoy-cover">
-							<h3 class="text-2xl text-white font-extrabold w-full text-center p-6">Çalışma adı</h3>
-							<p class="w-full px-18 text-white">Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler</p>
-						</div>
-					</div>
-				</div>
-				
+				{/if}
 			</div>
 		</div>
    </div>
 </div>
+
+
+<div>
+
+</div>
+
+
+<div class="w-full h-156">
+	<iframe title="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d24034.00816978646!2d27.7885961!3d41.1508736!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1539594890165"
+	 frameborder="0" width="100%" height="100%" style="border:0" allowfullscreen=""></iframe>
+</div>
+
 <style>
 	.cardEmploye {
 		@apply h-124 bg-red-500 bg-cover bg-center flex flex-col items-center justify-center relative;
