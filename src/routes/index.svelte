@@ -134,10 +134,10 @@
 
 <svelte:window bind:outerHeight={screenHeight} />
 
-<div  class="w-full h-screen flex flex-col bg-cover bg-fixed z-0 relative"  style="background-image: url('/stock_images/asansor.jpg');">
+<div  class="w-full h-screen flex flex-col bg-cover bg-fixed z-0 relative pt-24"  style="background-image: url('/stock_images/asansor.jpg');">
 	
 	<div class="top-0 left-0 w-full h-screen  absolute bg-gray-900 bg-opacity-70 z-0"></div>
-	<div class="flex flex-col flex-1 justify-center mb-40 items-center z-10">
+	<div class="flex flex-col flex-1 justify-center mt-24 items-center z-10">
 		
 		<a href="/" class="z-10 w-66 hidden sm:block">
 			<img src="/logo.png" class="w-66 " alt="">

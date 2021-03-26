@@ -16,11 +16,11 @@
 
 <div class="min-h-screen flex flex-col">
 
-<div  class="w-full  z-100 flex flex-col" class:absolute="{isIndex == true}" class:bg-gray-900="{isIndex != true}">
+<div  class="w-full  z-100 h-auto flex flex-col" class:absolute="{isIndex == true}" class:bg-gray-900="{isIndex != true}">
 						   
 	
 	<header>
-		<div class="container container-sm mx-auto z-10">
+		<div class=" sm:container sm:container-sm mx-auto z-10">
 			<Nav {segment} />
 		</div>
 
