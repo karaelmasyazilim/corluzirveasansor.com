@@ -18,7 +18,6 @@
 			window.scrollTo(0,screenHeight)
 		}
 	}
-
     let portfoy = [
 		{
 			img: '/stock_images/elevator3.jpg',
@@ -52,21 +51,18 @@
 		},
 		
 	]
-
-
 	let slider = [
 		{
 			img: '/stock_images/asansor.jpg',
 			header : 'Ürün adı1',
-			text : `Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
-			ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
+			text : `Lorem Ipsum, dizgi ve basIpsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
 			btnText : 'daha fazla bilgi',
 			btnLink : '#link'
 		},
 		{
 			img: '/stock_images/asansor2.jpg',
 			header : 'Ürün adı2',
-			text : `Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
+			text : `kı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
 			ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
 			btnText : 'daha fazla bilgi',
 			btnLink : '#link'
@@ -74,8 +70,7 @@
 		{
 			img: '/stock_images/asansor3.png',
 			header : 'Ürün adı3',
-			text : `Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile 
-			ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
+			text : `PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.`,
 			btnText : 'daha fazla bilgi',
 			btnLink : '#link'
 		},
@@ -164,30 +159,30 @@
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-12 pt-42">
 			<div class="flex flex-col items-center ">
-				<i class="fas fa-feather-alt fa-10x p-2"></i>
-				<h2 class="text-4xl p-6 font-semibold">Güvenli</h2>
-				<p class=" text-center font-semibold">
+				<i class="fas fa-feather-alt fa-10x p-2 "></i>
+				<h2 class="text-4xl p-6 font-semibold ">Güvenli</h2>
+				<p class=" text-center font-semibold text-red-500">
 					EN 81 Standartlarına göre üretilmiş ürünlerin montajını bakımını ve takibini gerçekleştiriyoruz
 				</p>
 			</div>
 			<div  class="flex flex-col items-center ">
-				<i class="fab fa-accessible-icon fa-10x p-2"></i>
-				<h2 class="text-4xl p-6 font-semibold">Erişilebilirlik</h2>
-				<p class=" text-center font-semibold">
+				<i class="fab fa-accessible-icon fa-10x p-2 "></i>
+				<h2 class="text-4xl p-6 font-semibold ">Erişilebilirlik</h2>
+				<p class=" text-center font-semibold text-red-500">
 					Butün kabinlerimizde sesli işikli geri bildirim, Kabartmalı tuş takımları bulunmaktadır
 				</p>
 			</div>
 			<div  class="flex flex-col items-center ">
-				<i class="fas fa-archway fa-10x p-2"></i>
-				<h2 class="text-4xl p-6 font-semibold">Zarif</h2>
-				<p class=" text-center font-semibold">
+				<i class="fas fa-archway fa-10x p-2 "></i>
+				<h2 class="text-4xl p-6 font-semibold ">Zarif</h2>
+				<p class=" text-center font-semibold text-red-500">
 					Yapınızla bir bütünmüş gibi görünen kapılar. Kullanıcılarına premium kalite malzeme deneyimi yaşatacaktır
 				</p>
 			</div>
 			<div  class="flex flex-col items-center ">
-				<i class="fa fa-cog fa-10x" aria-hidden="true"></i>
-				<h2 class="text-4xl p-6 font-semibold">Uzun ömürlü</h2>
-				<p class=" text-center font-semibold">
+				<i class="fa fa-cog fa-10x " aria-hidden="true"></i>
+				<h2 class="text-4xl p-6 font-semibold ">Uzun ömürlü</h2>
+				<p class=" text-center font-semibold text-red-500">
 					Yüksek malzeme kalitesi, Tecrübeli ustalarımız sayesinde uzun yıllar sorunsuz kullanılabilecek asansörler
 				</p>
 			</div>
@@ -196,7 +191,7 @@
 
 		<div class="pt-42">
 			<h2 class="text-5xl font-extrabold text-center mb-6">Kadromuz</h2>
-			<h3 class="text-3xl font-semibold text-center">İşini aşkla yapan ekibimiz</h3>
+			<h3 class="text-3xl font-semibold text-center text-red-500">İşini aşkla yapan ekibimiz</h3>
 			<hr class="border-0 border-b-1 p-3 border-red-500">
 			<div class="grid sm:grid-cols-3 grid-cols-1  gap-12 py-12">
 				<div class="cardEmploye" style="background-image: url('/employe/user1.jpg')">
@@ -270,8 +265,8 @@
 				
 					<ul class="flex flex-col w-64">
 						
-						<li><h4 class="inline-block pl-8 font-extrabold text-2xl">Plan</h4></li>
-						<li class="inline-block pl-8 font-semibold text-md">Tespit</li>
+						<li><h4 class="inline-block pl-8 font-extrabold text-2xl text-red-500">Plan</h4></li>
+						<li class="inline-block pl-8 font-semibold text-md ">Tespit</li>
 						<li class="inline-block  pl-8 font-semibold font-bold text-md">Hazırlık</li>
 						<li class="inline-block  pl-8 font-semibold  font-bold text-md">Projelendirme</li>
 					</ul>
@@ -280,7 +275,7 @@
 					<div><span class="block p-6 border-4 border-gray-900 rounded-full"> <i class="fas fa-money-bill fa-2x"></i> </span></div>
 					
 					<ul class="flex flex-col  w-64">
-						<li><h4 class="pl-8 font-bold text-2xl">Satış & Montaj</h4></li>
+						<li><h4 class="pl-8 font-bold text-2xl text-red-500">Satış & Montaj</h4></li>
 						<li class="inline-block pl-8 font-semibold text-md">Tedarik</li>
 						<li  class="inline-block pl-8 font-semibold text-md">Montaj</li>
 						<li  class="inline-block pl-8 font-semibold text-md">Test</li>
@@ -290,7 +285,7 @@
 					<div><span class="block p-6 border-4 border-gray-900 rounded-full"><i class="fab fa-whmcs fa-2x"></i>  </span></div>
 					
 					<ul class="flex flex-col  w-64">
-						<li><h4 class="pl-8 font-bold text-2xl">Teknik destek</h4></li>
+						<li><h4 class="pl-8 font-bold text-2xl text-red-500">Teknik destek</h4></li>
 						<li class="inline-block pl-8 font-semibold text-md">Periyodik Bakımlar</li>
 						<li  class="inline-block pl-8 font-semibold text-md">Arıza & Onarım</li>
 						<li  class="inline-block pl-8 font-semibold text-md">Yedek Parça</li>
@@ -343,7 +338,7 @@ on:mouseleave={resumeSlider}
 <div class="flex w-full min-h-screen bg-white z-10 relative">
    <div class="container container-md mx-auto">
 	    <div class="w-full h-full flex flex-col items-center  justify-center ">
-			<h2 class="text-5xl font-extrabold text-center mt-12 sm:mt-0">PORTFÖY</h2>
+			<h2 class="text-5xl font-extrabold text-center mt-12 sm:mt-0 text-red-500">PORTFÖY</h2>
 			<h3 class="text-3xl font-semibold text-center my-6">Yapmış oldugumuz bazı çalışmalara göz atabilirsiniz</h3>
 			<hr class="border-t-2 mt-3 mb-12 border-red-500 w-full">
 			<div class="w-full  grid grid-cols-1 sm:grid-cols-3">
